@@ -2,13 +2,12 @@ package Ejercicio24;
 
 
 public class Encargado extends Empleado {
-    private int porcentaje;
     private int sueldoFinal;
 
-    public Encargado(int sueldo, int porcentaje) {
+    public Encargado(int sueldo) {
         super(sueldo);
-        this.porcentaje = porcentaje;
-        sueldoFinal += sueldo + (sueldo * porcentaje / 100);
+
+        sueldoFinal += sueldo + (sueldo * 10 / 100);
     }
 
     @Override

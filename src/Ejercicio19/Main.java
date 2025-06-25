@@ -39,6 +39,7 @@ public class Main {
                 System.out.println("Introduzca un año: ");
                 anio2 = scanner.nextInt();
             }
+
             if (anio1 == fechaActual.getYear() || anio2 == fechaActual.getYear()) {
                 System.out.println("El año es correcto.");
             } else {
@@ -80,10 +81,14 @@ public class Main {
 
         LocalDate fecha1 = LocalDate.of(anio1, mes1, dia1);
         LocalDate fecha2 = LocalDate.of(anio2, mes2, dia2);
+        if (fecha2.isBefore(fecha1)) {
+            throw new Exception("No se puede volver hacia atrás en el tiempo.");
+        }
         System.out.println("La primera fecha es: " + fecha1);
         System.out.println("La segunda fecha es: " + fecha2);
         System.out.println("*************++++");
         long diasTranscurridos = ChronoUnit.DAYS.between(fecha1, fecha2);
+        System.out.println("Días transcurridos: " + diasTranscurridos);
         int salarioBruto = (int) diasTranscurridos * 55;
         salarioFinal = salarioBruto - salarioBruto * retencion / 100;
         System.out.println("El sueldo final añadiendo la retención es: " + salarioFinal);

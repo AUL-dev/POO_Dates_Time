@@ -50,9 +50,9 @@ public class Trabajador {
     public int retencion(int sueldo) {
         if (fechaAlta.getYear() < 1980) {
             sueldo -= sueldo * 20 / 100;
-        } else if (fechaAlta.getYear() >= 1980 && fechaAlta.getYear() <= 2000) {
+        } else if (fechaAlta.getYear() <= 2000) {
             sueldo -= sueldo * 15 / 100;
-        } else if (fechaAlta.getYear() > 2000) {
+        } else {
             sueldo -= sueldo * 5 / 100;
         }
         return sueldo;

@@ -17,7 +17,7 @@ public class Main {
         trabajadores[4] = new Trabajador("Pedro", "Martínez", 2145, trabajador5);
 
         for (int i = 0; i < trabajadores.length; i++) {
-            System.out.println(trabajadores[i].getNombre());
+            System.out.println("Nombre: "+trabajadores[i].getNombre());
             System.out.println(trabajadores[i].getApellidos());
             System.out.println(trabajadores[i].getSueldo());
             int sueldo = trabajadores[i].getSueldo();
