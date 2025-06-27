@@ -1,10 +1,10 @@
 package Ejercicio23;
 
-public class PersonalServicio extends Persona {
+public class PersonalServicio extends Empleado {
     private String seccion;
 
-    public PersonalServicio(String nombre, String apellidos, String DNI, String estdoCivil, String seccion) {
-        super(nombre, apellidos, DNI, estdoCivil);
+    public PersonalServicio(String nombre, String apellidos, String DNI, String estdoCivil, int anioIncorporcion, int numDespacho, String seccion) {
+        super(nombre, apellidos, DNI, estdoCivil, anioIncorporcion, numDespacho);
         this.seccion = seccion;
     }
 
@@ -28,9 +28,7 @@ public class PersonalServicio extends Persona {
             String nuevaSeccion = listaSecciones[listaPosiciones];
 
             if (nuevaSeccion.equalsIgnoreCase(seccion)) {
-                listaPosiciones = (int) (Math.random() * listaSecciones.length);
-                nuevaSeccion = listaSecciones[listaPosiciones];
-                setSeccion(nuevaSeccion);
+                continue;
             } else {
                 setSeccion(nuevaSeccion);
 

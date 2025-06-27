@@ -32,12 +32,12 @@ public class Profesor extends Empleado {
 
 
         while (true) {
+            // Primera vez matematicas
             int nuevaPosicion = (int) (Math.random() * listaDepartamentos.length);
             String nuevoDepartamento = listaDepartamentos[nuevaPosicion];
+
             if (nuevoDepartamento.equalsIgnoreCase(departamento)) {
-                nuevaPosicion = (int) (Math.random() * listaDepartamentos.length);
-                nuevoDepartamento = listaDepartamentos[nuevaPosicion];
-                setDepartamento(nuevoDepartamento);
+                continue;
             } else {
                 setDepartamento(nuevoDepartamento);
             }

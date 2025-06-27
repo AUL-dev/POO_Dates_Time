@@ -7,7 +7,9 @@ public class Sorteo {
         public static int lanzar() {
             int numAleatorio = 0;
 
+
             //(int) (Math.random() * 6) + 1; ESTO VALDRIA SIN PONER LOS PORCENTAJES??
+
             double probabilidad = (Math.random() * 100);
             if (probabilidad <= 16) {
                 numAleatorio = 1;
@@ -42,7 +44,7 @@ public class Sorteo {
     }
 
     public static void main(String[] args) {
-        System.out.println("El número aleatorio es: " + Dado.lanzar());
+        System.out.println("He tirado el dado y me ha salido un: " + Dado.lanzar());
         System.out.println("¿Será cara o cruz? " + Moneda.lanzar());
     }
 }
